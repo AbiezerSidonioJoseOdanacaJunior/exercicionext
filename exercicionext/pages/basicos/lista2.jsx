@@ -8,7 +8,7 @@ function gerarLista() {
         <span>6, </span>,
         <span>8, </span>,
         <span>9, </span>,
-        <span>10, </span>
+        <span>10+ </span>
        
     ]
     return lista
