@@ -1,0 +1,24 @@
+#integracao10 {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    font-weight: 600;
+    font-size: larger;
+
+}
+
+.vermelha {
+    color: #f30;
+}
+
+.azul {
+    color: #03a;
+}
+
+.branca {
+    background-color: #444;
+    color: #fff;
+}

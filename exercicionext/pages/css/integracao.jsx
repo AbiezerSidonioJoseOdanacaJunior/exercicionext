@@ -3,10 +3,10 @@
 
 export default function integracao() {
     return (
-        <>
+        <div className="integracao">
             <div className="vermelha">Item#01</div>
             <div className="azul">Item#02</div>
             <div className="branca">Item#03</div>
-        </>
+        </div>
     )
 }
