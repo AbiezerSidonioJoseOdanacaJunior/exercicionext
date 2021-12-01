@@ -11,12 +11,10 @@ export default function repeticao1() {
     ]
 
     function renderLista() {
-        const items = []
-
-        for (let i = 0; i <listaAprovados.length; i++) {
-            items.push(<li>{listaAprovados[i]}</li>)
-        }
-        return items
+        
+        return listaAprovados.map(function (nome, i) {
+            return <li key={i}>{nome}</li>
+        })
     }
 
     return (
@@ -27,3 +25,12 @@ export default function repeticao1() {
 
     )
 }
+
+//function renderLista() {
+ //   const items = []
+//
+  //  for (let i = 0; i <listaAprovados.length; i++) {
+    //    items.push(<li>{listaAprovados[i]}</li>)
+    //}
+   // return items
+// }
