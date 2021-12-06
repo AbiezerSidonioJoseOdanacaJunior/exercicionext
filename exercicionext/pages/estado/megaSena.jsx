@@ -1,18 +1,45 @@
 import { useState } from "react"
-  
-export default function (props) {
-    const [gerar, setGerar] = useState("0")
+import NumeroDisplay from "../../components/NumeroDisplay"
+import { mega } from "../../functions/mega"
 
-    function aletatorio() {
-        setGerar(gerar = "1, 3, 5, 6, 7, 9" )
+
+export default function () {
+
+    const estilo = {
+        backgroundColor: "#222",
+        color: "#fff",
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
+        flexWrap: "Wrap",
+        alignItems: "center",
+    }
+
+    const [qtd, setQtd] = useState(6)
+    const [numeros, setNumeros] = useState(mega(qtd))
+
+    function renderizarNumeros() {
+        return numeros.map(
+            numero => <NumeroDisplay key={numero} numero={numero} />
+        )
     }
 
 
-    return (
 
-        <div style={{display: "flex", flexDirection: "column"}}> 
-            {gerar}
-            <button onClick={aletatorio}>Gere Numero</button>
+    return (
+        <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}> 
+            <h1>Mega Sena</h1>
+            <div style={estilo}>
+                {renderizarNumeros()}
+            </div>
+            <div>
+                <input type="number" min={6} max={20} value={qtd} 
+                onChange={ev => setQtd(ev.target.value)}/>
+
+                <button onClick={() => setNumeros(mega(qtd))}>
+                    Gerear Aposta
+                </button>
+            </div>
         </div>
     )
 }
