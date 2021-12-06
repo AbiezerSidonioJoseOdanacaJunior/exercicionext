@@ -1,5 +1,5 @@
 import { useState } from "react"
-import ContadorDisplay from "../../components/ContadorDisplay"
+import ContadorDisplay from "../../components/NumeroDisplay"
 
 export default function contador() {
 
