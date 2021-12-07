@@ -18,6 +18,7 @@ export default function () {
     const [qtd, setQtd] = useState(6)
     const [numeros, setNumeros] = useState(mega(qtd))
 
+
     function renderizarNumeros() {
         return numeros.map(
             numero => <NumeroDisplay key={numero} numero={numero} />
